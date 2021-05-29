@@ -130,3 +130,4 @@ dmypy.json
 
 # node modules
 ./cp_ui/node_modules
+./cp_api/uploads/*
