@@ -10,7 +10,7 @@ import { ReactComponent as ArrowLeftIcon } from "../../../images/arrow-left-2-ic
 import { ReactComponent as ArrowRightIcon } from "../../../images/arrow-right-2-icon.svg";
 
 const SpeakerSlider = styled(Slider)`
-  ${tw`mt-16`}
+  ${tw`mt-16 relative`}
   .slick-track { 
     ${tw`flex`}
   }

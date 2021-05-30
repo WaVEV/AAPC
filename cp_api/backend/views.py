@@ -5,6 +5,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from django.db.models.base import ModelBase
 from rest_framework import filters
+import django_filters
 
 from .serializers import (
     GeneralSerializer,
@@ -17,13 +18,13 @@ from . import models
 
 class GeneralViewSet(viewsets.ReadOnlyModelViewSet):
 
-     def get_queryset(self):
+    def get_queryset(self):
         return self.model.objects.all()
 
-     def get_serializer_class(self):
-         model = self.kwargs.get('model')
-         GeneralSerializer.Meta.model = self.model
-         return GeneralSerializer
+    def get_serializer_class(self):
+        model = self.kwargs.get('model')
+        GeneralSerializer.Meta.model = self.model
+        return GeneralSerializer
 
 
 class Languages(GeneralViewSet):
@@ -49,8 +50,6 @@ class Sponsor(GeneralViewSet):
 class Subjects(GeneralViewSet):
     model = models.Subject
 
-
-import django_filters
 
 class EditionFilter(django_filters.FilterSet):
     editions = django_filters.NumberFilter(
@@ -78,7 +77,7 @@ class Lessons(GeneralViewSet):
     filterset_fields = ['edition']
 
     def get_serializer_class(self):
-         return LessonSerializer
+        return LessonSerializer
 
 
 class Contests(GeneralViewSet):
