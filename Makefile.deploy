@@ -1,0 +1,20 @@
+SHELL := /bin/bash
+BUILD_NAME?='Noname'
+PROJECT_NAME := cp_api
+VIRTUALENV := /home/WaVEV/.virtualenvs/env
+BUILD_FOLDER := $(patsubst %.tar.gz,%,$(BUILD_NAME))
+
+deploy-prod:
+	tar -xzvf $(BUILD_NAME)
+	mv $(PROJECT_NAME)/backend $(PROJECT_NAME)/backend_back
+	mv $(PROJECT_NAME)/frontend $(PROJECT_NAME)/frontend_back
+	mv $(PROJECT_NAME)/cp_api $(PROJECT_NAME)/cp_api_back
+	cp -r $(BUILD_FOLDER)/$(PROJECT_NAME)/backend $(PROJECT_NAME)/
+	cp -r $(BUILD_FOLDER)/$(PROJECT_NAME)/frontend $(PROJECT_NAME)/
+	cp -r $(BUILD_FOLDER)/$(PROJECT_NAME)/cp_api $(PROJECT_NAME)/cp_api
+	cp -r $(BUILD_FOLDER)/requirements.txt $(PROJECT_NAME)/cp_api
+	. $(VIRTUALENV)/bin/activate && pip install -r $(PROJECT_NAME)/requirements.txt
+	. $(VIRTUALENV)/bin/activate && cd $(PROJECT_NAME) && python manage.py collectstatic
+	rm -r $(PROJECT_NAME)/*_back
+	rm -r $(BUILD_FOLDER)
+	rm -r $(BUILD_NAME)
