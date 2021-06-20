@@ -93,7 +93,7 @@ class Speakers extends React.Component{
                   </LeftImageCardContainer>
                   <RightTextCardContainer>
                     <SpeakerName> {`${speaker.name} ${speaker.surname}`} </SpeakerName>
-                    <Text> {speaker.summary && speaker.summary.text.find(({language}) => language.code === this.props.language).summary_text} </Text>
+                    <Text> {speaker.summary && speaker.summary.text.find(({language}) => language.code === this.props.language)?.summary_text} </Text>
                   </RightTextCardContainer>
                 </SpeakersCard>
               </SpeakerContainer>
