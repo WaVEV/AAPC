@@ -20,13 +20,13 @@ const Table = styled.table`
     ${tw`border-black border-b pb-4`}
   }
   tr {
-    ${tw`even:bg-gray-300 pb-2`}
+    ${tw`even:bg-gray-300`}
   }
   tbody {
     ${tw``}
   }
   td {
-    ${tw` mt-10 items-center text-center`}
+    ${tw`items-center text-center pb-2 pt-2`}
   }
   a{
     ${tw` items-center text-center`}
