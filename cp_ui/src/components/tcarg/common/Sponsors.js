@@ -8,10 +8,10 @@ import { SectionHeading as Heading } from "components/misc/Headings.js";
 const SponsorsSeparator = tw.div`mt-8`;
 const Subheading = tw.h5`font-bold text-3xl text-yellow-900 text-center mb-4`;
 const SponsorRow = tw.div`flex flex-col lg:flex-row items-center lg:items-stretch justify-center`;
-const SponsorCard = tw.div`mt-16 lg:w-1/3`;
+const SponsorCard = tw.div`mt-16 lg:w-1/3 m-auto`;
 const SponsorBox = tw.div`px-4 text-center max-w-xs mx-auto flex flex-col items-center`;
-const ImageContainer = tw.div`px-4 h-16 max-w-xs mx-auto flex flex-col items-center`;
-const Image = tw.img`h-16`;
+const ImageContainer = tw.div`px-4 max-w-xs mx-auto flex flex-col items-center`;
+const Image = tw.img``;
 const Quote = tw.blockquote`mt-5 text-gray-600 font-medium leading-loose`;
 
 
