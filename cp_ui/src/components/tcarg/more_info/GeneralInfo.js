@@ -52,7 +52,7 @@ const GeneralInfo = (props) => {
               <ul>
                 <li> <strong> De 10:00 a 11:30 hs (UTC-3):</strong> resolución de problemas de competencias de días previos. El primer día realizaremos una bienvenida e introducción al evento en este horario. </li>
                 <li> <strong> De 11:30 a 13:00 hs (UTC-3): </strong> clases teóricas en donde se explicarán algoritmos, técnicas, estructuras y trucos útiles para las competencias de programación. </li>
-                <li> Las clases serán por streaming con interacción por chat y se transmitirán por <a href='https://www.youtube.com/channel/UCTtoEdiHyjP6XmxMGhsngCA' target="_blank"> este canal de Youtube </a> </li>
+                <li> Las clases serán por streaming con interacción por chat y se transmitirán por <a href='https://www.youtube.com/channel/UCTtoEdiHyjP6XmxMGhsngCA' target="_blank"> este canal de Youtube </a> . </li>
               </ul>
 
             <h3 > Turno tarde </h3>
@@ -68,7 +68,7 @@ const GeneralInfo = (props) => {
               <ul>
                 <li> <strong> From 10:00 to 11:30 hs (UTC-3):</strong> resolution of competition problems from previous days. On the first day we will have a welcome and introduction to the event at this time.</li>
                 <li> <strong> From 11:30 to 13:00 hs (UTC-3): </strong> Theoretical classes where algorithms, techniques, structures and useful tricks for programming skills will be explained. </li>
-                <li> The classes will be by streaming with chat interaction, and it will be transmitted on <a href='https://www.youtube.com/channel/UCTtoEdiHyjP6XmxMGhsngCA' target="_blank"> this Youtube Channel </a> </li>
+                <li> The classes will be by streaming with chat interaction, and it will be transmitted on <a href='https://www.youtube.com/channel/UCTtoEdiHyjP6XmxMGhsngCA' target="_blank"> this Youtube Channel </a> . </li>
               </ul>
 
             <h3 > Afternoon shift </h3>

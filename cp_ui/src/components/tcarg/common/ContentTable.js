@@ -9,23 +9,24 @@ import { ReactComponent as ZipIcon } from "images/zip-icon.svg"
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 import api from 'helpers/api'
 
+const RowContainer = tw.div`mt-8`
 const TableContainer = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap mt-4`;
 const Table = styled.table`
-  ${tw`table-auto mt-2 w-full border-black`}
+  ${tw`table-auto mt-2 w-full`}
   thead {
     ${tw`text-xl font-bold`}
   }
   th {
-    ${tw`border-black border`}
+    ${tw`border-black border-b pb-4`}
   }
   tr {
-    ${tw`border-black border-black border-b`}
+    ${tw`even:bg-gray-300 pb-2`}
   }
   tbody {
-    ${tw`border-black`}
+    ${tw``}
   }
   td {
-    ${tw` mt-10 border border-black items-center text-center`}
+    ${tw` mt-10 items-center text-center`}
   }
   a{
     ${tw` items-center text-center`}
@@ -92,7 +93,9 @@ class ContentTable extends React.Component{
     }
     levels = Object.entries(levels).sort((a, b) => a[1].level - b[1].level);
 
-    const headers = this.state.language === 'ESP' ? ['Día', 'Orador/a', 'Materia', 'Adjunto', 'Video'] : ['Day', 'Speaker', 'Subject', 'Attachment', 'Video'];
+    console.log('this.state.language')
+    console.log(this.props.language)
+    const headers = this.props.language === 'ESP' ? ['Día', 'Orador/a', 'Materia', 'Adjunto', 'Video'] : ['Day', 'Speaker', 'Subject', 'Attachment', 'Video'];
     if (this.state.lessons.length === 0){
       return '';
     }
@@ -118,14 +121,14 @@ class ContentTable extends React.Component{
                   lesson.video && (<a href={lesson.video} target='blank'> <Youtube /> </a>),
                 ]});
               return (
-                <React.Fragment key={levelId}>
+                <RowContainer key={levelId}>
                   <HeadingContainer>
                     <Subheading> {name} </Subheading>
                   </HeadingContainer>
                   <TableContainer>
                     <GenericTable headers={headers} rows={rows} />
                   </TableContainer>
-                </React.Fragment>
+                </RowContainer>
               );
             })
           }

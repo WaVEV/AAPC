@@ -17,12 +17,16 @@ const SpeakerSlider = styled(Slider)`
   .slick-slide {
     ${tw`h-auto flex justify-center mb-1`}
   }
+  .slick-slide > div{
+    ${tw`w-full`}
+  }
 `;
 
 const SpeakerContainer = tw.div`flex flex-col lg:flex-row items-center lg:items-stretch pl-16 pr-16`;
-const SpeakersCard = tw.div`mt-4 flex flex-col lg:flex-row items-center lg:items-stretch pl-8 pr-8`;
+const SpeakersCard = tw.div`mt-4 flex flex-col lg:flex-row items-center lg:items-stretch pl-8 pr-8 m-auto`;
 const LeftImageCardContainer = tw.div`lg:w-1/4 md:w-full flex`;
-const Image = tw.img`max-w-full h-auto md:w-full object-contain object-left-top`;
+const ImageContainer = tw.div`m-auto max-w-xs mx-auto flex flex-col items-center h-48`;
+const Image = tw.img`object-contain object-left-top max-h-full`;
 
 const RightTextCardContainer = tw.div`lg:w-3/4 md:w-full flex lg:flex-col md:flex-col pl-8`;
 const SpeakerName = tw.h5`text-gray-600 font-medium md:w-full md:mt-8`;
@@ -89,7 +93,7 @@ class Speakers extends React.Component{
               <SpeakerContainer key={index}>
                 <SpeakersCard>
                   <LeftImageCardContainer>
-                    <Image src={speaker.picture || '/static/default-user-image.png'}/>
+                    <ImageContainer> <Image src={speaker.picture || '/static/default-user-image.png'}/> </ImageContainer>
                   </LeftImageCardContainer>
                   <RightTextCardContainer>
                     <SpeakerName> {`${speaker.name} ${speaker.surname}`} </SpeakerName>
