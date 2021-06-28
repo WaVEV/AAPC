@@ -10,7 +10,7 @@ import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 import api from 'helpers/api'
 
 const RowContainer = tw.div`mt-8`
-const TableContainer = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap mt-4`;
+const TableContainer = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap mt-4 overflow-x-auto`;
 const Table = styled.table`
   ${tw`table-auto mt-2 w-full`}
   thead {

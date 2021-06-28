@@ -10,7 +10,7 @@ import DropDown from "./NavDropDown.js";
 
 const NavLink = styled(Link)`${tw`text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500`}`
+  pb-1 border-b-2 border-transparent text-gray-900 hover:border-primary-500 hocus:text-primary-500`}`
 
 export const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
@@ -23,7 +23,7 @@ export const LogoLink = styled(NavLink)`
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
   ${DesktopNavLinks}, ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
+    ${tw`sm:text-gray-100 sm:hover:border-gray-300 sm:hover:text-gray-300 text-gray-900`}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-gray-500`}

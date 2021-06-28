@@ -22,18 +22,18 @@ const SpeakerSlider = styled(Slider)`
   }
 `;
 
-const SpeakerContainer = tw.div`flex flex-col lg:flex-row items-center lg:items-stretch pl-16 pr-16`;
-const SpeakersCard = tw.div`mt-4 flex flex-col lg:flex-row items-center lg:items-stretch pl-8 pr-8 m-auto`;
-const LeftImageCardContainer = tw.div`lg:w-1/4 md:w-full flex`;
+const SpeakerContainer = tw.div`flex flex-col lg:flex-row items-center lg:items-stretch pl-2 pr-2 sm:pl-16 sm:pr-16`;
+const SpeakersCard = tw.div`mt-4 flex flex-col lg:flex-row items-center lg:items-stretch sm:pl-8 sm:pr-8 m-auto`;
+const LeftImageCardContainer = tw.div`lg:w-1/4 w-full flex`;
 const ImageContainer = tw.div`m-auto max-w-xs mx-auto flex flex-col items-center h-48`;
 const Image = tw.img`object-contain object-left-top max-h-full`;
 
-const RightTextCardContainer = tw.div`lg:w-3/4 md:w-full flex lg:flex-col md:flex-col pl-8`;
-const SpeakerName = tw.h5`text-gray-600 font-medium md:w-full md:mt-8`;
-const Text = tw.p`mt-4 md:mt-8`;
+const RightTextCardContainer = tw.div`lg:w-3/4 w-full flex lg:flex-col flex-col sm:pl-8 justify-center items-center lg:justify-self-auto lg:items-start`;
+const SpeakerName = tw.span`text-gray-600 font-medium lg:w-full mt-2`;
+const Text = tw.p`mt-4 mt-8`;
 
 const SliderControlButtonContainer = styled.div`
-  ${tw`absolute top-0 h-full flex items-end md:items-center z-20`}
+  ${tw`absolute top-0 h-full flex items-end md:items-center z-20 hidden sm:flex`}
   button {
     ${tw`text-secondary-500 hover:text-primary-500 focus:outline-none transition duration-300 transform hover:scale-125 transform -translate-y-2/3 md:translate-y-0`}
     svg {

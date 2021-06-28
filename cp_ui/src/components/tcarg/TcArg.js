@@ -18,7 +18,8 @@ import Faq from "components/tcarg/faq.js"
 
 const PrimaryAction = styled(Link)`${tw`px-8 py-3 cursor-pointer text-sm sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-black font-bold rounded shadow transition duration-300 hocus:bg-gray-800 hocus:text-gray-100 focus:shadow-outline`}`;
 const InscriptionForm = tw.a`px-8 py-3 cursor-pointer text-sm sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-black font-bold rounded shadow transition duration-300 hocus:bg-gray-800 hocus:text-gray-100 focus:shadow-outline`;
-const ButtonsContainer = tw.div`flex space-x-12 mb-4 text-sm font-medium`;
+const ButtonsContainer = tw.div`sm:inline-flex sm:space-x-12 mb-4 text-sm font-medium`;
+const ButtonContainer = tw.div`first:mt-5 w-full sm:w-auto justify-center items-center first:sm:ml-0 first:sm:mt-0 inline-flex sm:space-x-12 mb-4 text-sm font-medium`;
 
 const TcArgMain = (props) => {
     console.log(props.language);
@@ -29,9 +30,15 @@ const TcArgMain = (props) => {
     <>
         <Hero header="Training Camp" backgroundImage="/static/hero_1.jpg">
             <ButtonsContainer>
-                <InscriptionForm href="https://forms.gle/Q5RdQpX352cg3ifX8" target="_black"> {inscriptionFormText} </InscriptionForm>
-                <PrimaryAction to={`${props.match.path}/more_info`}> {moreInfo} </PrimaryAction>
-                <PrimaryAction to={`${props.match.path}/previous_editions`}> {previousEditions} </PrimaryAction>
+                <ButtonContainer>
+                    <InscriptionForm href="https://forms.gle/Q5RdQpX352cg3ifX8" target="_black"> {inscriptionFormText} </InscriptionForm>
+                </ButtonContainer>
+                <ButtonContainer>
+                    <PrimaryAction to={`${props.match.path}/more_info`}> {moreInfo} </PrimaryAction>
+                </ButtonContainer>
+                <ButtonContainer>
+                    <PrimaryAction to={`${props.match.path}/previous_editions`}> {previousEditions} </PrimaryAction>
+                </ButtonContainer>
             </ButtonsContainer>
         </Hero>
         <TcDescription {...props}/>
