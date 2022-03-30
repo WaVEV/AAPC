@@ -45,7 +45,7 @@ const GeneralInfo = (props) => {
   if (props.language === 'ESP'){
     text = (<Text>
             
-            <p>El evento transcurrirá desde el 19 al 30 julio (sin incluir sábado y domingo) y estará dividido en dos niveles: 
+            <p>El evento transcurrirá desde el 18 al 29 julio (sin incluir sábado y domingo) y estará dividido en dos niveles: 
             inicial y avanzado. Las actividades por nivel serán las siguientes:</p>
 
             <h3 > Turno mañana: </h3>
@@ -62,7 +62,7 @@ const GeneralInfo = (props) => {
           </Text>)
   }else if(props.language === 'ENG'){
     text = (<Text>
-            <p>The event will run from July 19 to 30 (not including Saturday and Sunday) and will be divided into two levels:
+            <p>The event will run from July 18 to 29 (not including Saturday and Sunday) and will be divided into two levels:
             initial and advanced. The activities by level will be the following:</p>
             <h3 > Morning shift: </h3>
               <ul>
