@@ -29,7 +29,7 @@ const tcIntroData = {
     heading: "¿Qué es el Training Camp?",
     description: [
       "Se trata de un entrenamiento intensivo de 2 semanas para competencias de programación con una parte teórica durante la mañana y sesiones de práctica durante la tarde.",
-      "El Training Camp se organiza todos los años desde 2010 durante el receso invernal en distintas universidades de la Argentina. La edición 2022 será la duotrigesima edición y se realizará de manera virtual.",
+      "El Training Camp se organiza todos los años desde 2010 durante el receso invernal en distintas universidades de la Argentina. La edición 2022 será la decimotercera edición y se realizará de manera virtual.",
       "El Training Camp dura dos semanas desde 18 a 29 de julio, de lunes a viernes, de 9 a 18hs."
     ],
     faqText: "Ver preguntas frecuentes"
