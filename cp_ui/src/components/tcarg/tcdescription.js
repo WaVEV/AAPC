@@ -30,7 +30,7 @@ const tcIntroData = {
     description: [
       "Se trata de un entrenamiento intensivo de 2 semanas para competencias de programación con una parte teórica durante la mañana y sesiones de práctica durante la tarde.",
       "El Training Camp se organiza todos los años desde 2010 durante el receso invernal en distintas universidades de la Argentina. La edición 2022 será la decimotercera edición y se realizará de manera virtual.",
-      "El Training Camp dura dos semanas desde 18 a 29 de julio, de lunes a viernes, de 9 a 18hs."
+      "El Training Camp dura dos semanas desde 18 a 29 de julio, de lunes a viernes, de 9 a 20hs."
     ],
     faqText: "Ver preguntas frecuentes"
   },
@@ -39,7 +39,7 @@ const tcIntroData = {
     description: [
       "The Training Camp is an intensive training course of 2 weeks for programming contests with theoretical classes during the morning and practice sessions during the afternoon.",
       "The Training Camp has been organized every year since 2010 during the winter break in different universities in Argentina. The 2022 edition will be the thirteenth edition and will run virtually.",
-      "The Training Camp lasts two weeks from July 18 to 29, Monday through Friday, from 9 a.m. to 6 p.m."
+      "The Training Camp lasts two weeks from July 18 to 29, Monday through Friday, from 9 a.m. to 8 p.m."
     ],
     faqText: "See more frequently asked questions"
   }
