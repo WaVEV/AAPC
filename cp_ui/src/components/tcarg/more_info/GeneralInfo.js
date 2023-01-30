@@ -56,7 +56,7 @@ const GeneralInfo = (props) => {
               </ul>
 
             <h3 > Turno tarde </h3>
-            <p> Se realizará una competencia para cada nivel, al estilo ICPC, cada día con duración de 5 horas. La misma será desde las 15:00 hasta las 20:00 hs (UTC-3). Se va a utilizar <a href="https://www.codeforces.com" target="_blank"> Codeforces </a> para hostear los contests. Estos se encontrarán en un grupo creado para el evento, al cual es obligatorio unirse <a href="https://codeforces.com/group/j1UosVRZar" > Grupo Codeforces </a>. </p>
+            <p> Se realizará una competencia para cada nivel, al estilo ICPC, cada día con duración de 5 horas. La misma será desde las 15:00 hasta las 20:00 hs (UTC-3). Se va a utilizar <a href="https://www.codeforces.com" target="_blank"> Codeforces </a> para hostear los contests. Estos se encontrarán en un grupo creado para el evento, al cual es obligatorio unirse <a href="https://codeforces.com/group/gXivUSZQpn/blog" target="_blank"> Grupo Codeforces </a>. </p>
             <p> La participación en las competencias puede realizarse de manera individual, o en equipos de a lo sumo 3 personas (siendo esto último lo que se recomienda). Para quienes quieran participar en equipos, deben crear previamente un team en la página de Codeforces. </p>
 
           </Text>)
@@ -72,7 +72,7 @@ const GeneralInfo = (props) => {
               </ul>
 
             <h3 > Afternoon shift </h3>
-            <p> There will be a competition for each level, ICPC style, each day lasting 5 hours. It will be from 3:00 p.m. to 8:00 p.m. (UTC-3). <a href="https://www.codeforces.com" target="_blank"> Codeforces </a> will be used to host the contests. These will be found in a group created for the event, which is mandatory to join <a href="https://codeforces.com/group/j1UosVRZar" > Codeforces Group </a>. </p>
+            <p> There will be a competition for each level, ICPC style, each day lasting 5 hours. It will be from 3:00 p.m. to 8:00 p.m. (UTC-3). <a href="https://www.codeforces.com" target="_blank"> Codeforces </a> will be used to host the contests. These will be found in a group created for the event, which is mandatory to join <a href="https://codeforces.com/group/gXivUSZQpn/blog" target="_blank"> Codeforces Group </a>. </p>
             <p> Participation in competitions could be individually or in teams of at most three people (the latter being what it's recommended). For those participants who wants to participate in teams, they must previously create a team on the Codeforces page. </p>
           </Text>)
   }
