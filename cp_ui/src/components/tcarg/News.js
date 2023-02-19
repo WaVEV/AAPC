@@ -76,7 +76,7 @@ class News extends React.Component{
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.editions.current.id !== prevProps.editions.current?.id) {
+    if (this.props.editions.current?.id !== prevProps.editions.current?.id) {
         this.getNews();
       }
   }

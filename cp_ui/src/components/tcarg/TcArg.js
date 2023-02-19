@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {Route, Switch, Link} from 'react-router-dom'
 import tw from "twin.macro";
 import "style.css"
-import "tailwindcss/dist/base.css"
+// import "tailwindcss/dist/base.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 
 import Hero from "components/hero/Hero.js";

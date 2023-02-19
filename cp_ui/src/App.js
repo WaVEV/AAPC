@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './redux/store.js'
-import "style.css"
-import "tailwindcss/dist/base.css"
+import "./App.css";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import getEditions from 'redux/actions/getEditions'
 

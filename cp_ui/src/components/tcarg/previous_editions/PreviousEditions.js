@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from 'react-redux';
 import tw from "twin.macro";
 import "style.css"
-import "tailwindcss/dist/base.css"
+//import "tailwindcss/dist/base.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 
 import Hero from "components/hero/MiniHero.js";

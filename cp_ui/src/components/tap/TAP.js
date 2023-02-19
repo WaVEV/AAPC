@@ -1,6 +1,6 @@
 import React from "react"
 import "style.css"
-import "tailwindcss/dist/base.css"
+// import "tailwindcss/dist/base.css"
 import useAnimatedNavToggler from "helpers/useAnimatedNavToggler"
 
 import Hero from "./Hero.js";
