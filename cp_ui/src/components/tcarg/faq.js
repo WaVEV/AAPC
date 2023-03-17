@@ -34,6 +34,11 @@ const faqsData = {
     heading: "Preguntas Frecuentes",
     faqs: [
       {
+        question: "¿Cómo llegar y dónde alojarme?",
+        answer:
+          "Para quienes vienen del exterior recomendamos alojarse en la ciudad de Buenos Aires y no en La Matanza. Más adelante agregaremos más información con recomendaciones de viaje y acceso a la universidad."
+      },
+      {
         question: "¿Qué es una competencia de programación?",
         answer:
           "Se trata de competencias en las que hay que resolver problemas individualmente o en equipo, utilizando razonamientos de lógica y matemática, como así también algorítmicos. Luego, la solución debe ser implementada mediante un lenguaje de programación, y se evalúa dicha solución contra un conjunto de casos de prueba que juzgan automáticamente (y muchas veces en vivo) si esta es correcta o no."
@@ -79,6 +84,11 @@ const faqsData = {
   ENG: {
     heading: "Frequently Asked Questions",
     faqs: [
+      {
+        question: "How to get there and where to stay?",
+        answer:
+          "For those who come from abroad, we recommend staying in the city of Buenos Aires and not in La Matanza. Later we will add more information with travel recommendations and access to the university."
+      },
       {
         question: "What is a programming contest?",
         answer:

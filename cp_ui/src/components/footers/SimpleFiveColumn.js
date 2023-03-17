@@ -7,6 +7,7 @@ import LogoImage from "../../images/AAPC.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
+import { ReactComponent as DiscordIcon } from "../../images/discord-icon.svg";
 
 const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
 const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
@@ -44,17 +45,21 @@ export default () => {
             <LogoText>AAPC</LogoText>
           </LogoContainer>
           <CompanyDescription>
-            AAPC es una asociación sin fines de lucro.
+            AAPC es una asociación sin fines de lucro. Para consultas, enviar mail a: contacto.trainingcamp.arg@gmail.com 
+
           </CompanyDescription>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://www.facebook.com/groups/latinoamerica.icpc">
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
+            <SocialLink href="https://www.youtube.com/@trainingcampargentina8088">
               <YoutubeIcon />
+            </SocialLink>
+            <SocialLink href="https://discord.gg/EbxaPprW">
+              <DiscordIcon />
             </SocialLink>
           </SocialLinksContainer>
         </WideColumn>
