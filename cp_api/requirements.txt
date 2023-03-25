@@ -28,3 +28,4 @@ python-environ
 Django
 psycopg2-binary
 ipdb
+python-dotenv

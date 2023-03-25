@@ -78,7 +78,7 @@ const GeneralInfo = (props) => {
   return (
       <Container>
         <ContentWithPaddingLg>
-          <Heading>Training Camp Argentina - Virtual</Heading>
+          <Heading>Training Camp Argentina</Heading>
             {text}  
         </ContentWithPaddingLg>
       </Container>
