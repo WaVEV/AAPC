@@ -18,7 +18,7 @@ const MoreInfo = (props) => {
   return (
     <>
     <Hero header={heading} backgroundImage="/static/hero_1.jpg" >
-      <PrimaryAction href="https://forms.gle/uzzhNRs2wJCoCiPB9" target="_black"> {inscriptionFormText} </PrimaryAction>
+      <PrimaryAction href="https://forms.gle/wtQAPMCKMnYjZSyi7" target="_black"> {inscriptionFormText} </PrimaryAction>
     </Hero>
     <GeneralInfo />
     <Speakers />
