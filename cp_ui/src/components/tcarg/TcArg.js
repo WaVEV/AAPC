@@ -39,6 +39,9 @@ const TcArgMain = (props) => {
                 <ButtonContainer>
                     <PrimaryAction to={`${props.match.path}/previous_editions`}> {previousEditions} </PrimaryAction>
                 </ButtonContainer>
+                <ButtonContainer>
+                    <PrimaryAction to={`${props.match.path}/faq`}> {previousEditions} </PrimaryAction>
+                </ButtonContainer>
             </ButtonsContainer>
         </Hero>
         <TcDescription {...props}/>
