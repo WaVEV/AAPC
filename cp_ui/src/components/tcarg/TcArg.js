@@ -26,6 +26,7 @@ const TcArgMain = (props) => {
     const inscriptionFormText = props.language === 'ESP' ? 'Formulario de Inscripción' : 'Registration Form';
     const moreInfo = props.language === 'ESP' ? 'Más Información' : 'More Info';
     const previousEditions = props.language === 'ESP' ? 'Ediciones Anteriores' : 'Previous Editions';
+    const faqText= props.language === 'ESP' ? 'Ver preguntas frecuentes' : 'See more frequently asked questions';
     return (
     <>
         <Hero header="Training Camp" backgroundImage="/static/hero_1.jpg">
@@ -40,7 +41,7 @@ const TcArgMain = (props) => {
                     <PrimaryAction to={`${props.match.path}/previous_editions`}> {previousEditions} </PrimaryAction>
                 </ButtonContainer>
                 <ButtonContainer>
-                    <PrimaryAction to={`${props.match.path}/faq`}> {previousEditions} </PrimaryAction>
+                    <PrimaryAction to={`${props.match.path}/faq`}> {faqText} </PrimaryAction>
                 </ButtonContainer>
             </ButtonsContainer>
         </Hero>
