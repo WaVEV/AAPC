@@ -23,6 +23,7 @@ const Image = styled.div(props => [
 const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`;
 const Description = tw.div`mt-2 text-lg leading-loose`;
 const Link = tw.a`inline-block mt-4 text-sm text-gray-900 p-4 font-bold cursor-pointer transition duration-300 border border-transparent hover:border-green-500`;
+const HeaderLink = tw.a`inline-block text-4xl sm:text-5xl text-blue-700 font-bold cursor-pointer transition duration-300 border border-transparent hover:border-blue-500`;
 
 const tcIntroData = {
   ESP: {
@@ -46,9 +47,15 @@ const tcIntroData = {
 }
 
 const TcDescription = (props) => {
+  const presentation_header = props.language === "ENG" ? 'Training Camp Argentina 2023! Ask us anything at 16th of April 6:00 PM UTC-3 on' : '¡Training Camp Argentina 2023! Respondemos dudas el 16 de Abril las 18:00 hs en'
   const {heading, description, faqText} = tcIntroData[props.language]
   return (
     <Container>
+      <SingleColumn>
+          <HeadingInfoContainer>
+            <HeadingTitle>{ presentation_header } <HeaderLink href="https://www.youtube.com/watch?v=YnBFkCoeLjo"> Youtube </HeaderLink> ! </HeadingTitle>
+          </HeadingInfoContainer>
+        </SingleColumn>
       <SingleColumn>
         <HeadingInfoContainer>
           <HeadingTitle>{heading}</HeadingTitle>
