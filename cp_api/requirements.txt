@@ -29,3 +29,4 @@ Django
 psycopg2-binary
 ipdb
 python-dotenv
+gunicorn==20.1.0

@@ -1,13 +1,14 @@
 version: '3.8'
 
 services:
-  web:
+  backend:
+    container_name: backend
     build: ./cp_api
-    command: python ./manage.py runserver 0.0.0.0:8000
+    command: gunicorn cp_api.wsgi --bind 0.0.0.0:8000
     volumes:
       - ./cp_api/:/usr/src/app/
-    ports:
-      - 8000:8000
+    expose:
+      - 8000
     env_file:
       - ./.env
     depends_on:
@@ -21,5 +22,28 @@ services:
       - POSTGRES_PASSWORD=$SQL_PASSWORD
       - POSTGRES_DB=$SQL_DATABASE
 
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./cp_ui/Dockerfile
+    command: /start.sh
+    expose:
+      - 3000
+
+  nginx:
+    restart: unless-stopped
+    container_name: nginx_server
+    build: ./nginx
+    depends_on:
+      - backend
+      - frontend
+    ports:
+      - "80:80"
+
 volumes:
   postgres_data:
+
+
+
+# https://saasitive.com/tutorial/docker-compose-django-react-nginx-let-s-encrypt/

@@ -134,4 +134,9 @@ dmypy.json
 # static
 ./cp_api/uploads/*
 ./cp_api/frontend/static/*
-.*.env
+cp_api/static
+*.env
+*.env.prod
+*.env.dev
+*.env.staging
+
