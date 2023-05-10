@@ -134,3 +134,4 @@ dmypy.json
 # static
 ./cp_api/uploads/*
 ./cp_api/frontend/static/*
+.*.env
