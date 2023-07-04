@@ -45,7 +45,11 @@ class Sponsors extends React.Component{
           return (
             <SponsorCard key={key}>
               <SponsorBox>
-                <ImageContainer> <Image src={logo} /> </ImageContainer>
+                <Link href={link} target='_blank'>
+                  <ImageContainer>
+                  <Image src={logo} />
+                  </ImageContainer>
+                </Link>
                 <Link href={link} target='_blank'>{name}</Link> 
               </SponsorBox>
             </SponsorCard>);
