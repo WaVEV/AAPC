@@ -20,7 +20,7 @@ const ScheduleCard = styled.div`
       ${tw`table-auto w-full mt-2`}
     }
     thead {
-      ${tw`text-lg font-bold`}
+      ${tw`text-base`}
     }
     th {
       ${tw`border-gray-300 pb-1 border-b`}
