@@ -29,9 +29,9 @@ const tcIntroData = {
   ESP: {
     heading: "¿Qué es el Training Camp?",
     description: [
-      <p key="paragraph 1"> Se trata de un entrenamiento intensivo de 2 semanas para competencias de programación con una parte teórica durante la mañana y sesiones de práctica durante la tarde. </p>,
-      <p key="paragraph 2"> El Training Camp se organiza todos los años desde 2010 durante el receso invernal en distintas universidades de la Argentina. La edición 2023 será la decimocuarta edición se realizara en <a class="text-blue-400" target="blank" href="https://goo.gl/maps/qVs12u8s9BZiS1ge9">La Matanza</a> </p>,
-      <p key="paragraph 3"> El Training Camp dura dos semanas desde 31 de Julio al 11 de Agosto, de lunes a viernes, de 9 a 19hs. </p>
+      <p key="paragraph 1"> El Training Camp es un programa de entrenamiento intensivo de dos semanas diseñado para competencias de programación. Durante la mañana, se imparten clases teóricas y por las tardes se realizan sesiones de práctica. </p>,
+      <p key="paragraph 2"> Este evento se lleva a cabo anualmente desde 2010, aprovechando el receso invernal, en diferentes universidades de Argentina. La edición de 2023 será la decimocuarta y se llevará a cabo en <a className="text-blue-400" target="blank" href="https://goo.gl/maps/qVs12u8s9BZiS1ge9">La Matanza</a> </p>,
+      <p key="paragraph 3"> El Training Camp tiene una duración de dos semanas, del 31 de Julio al 11 de Agosto. Las actividades se realizan de lunes a viernes, de 9:00 a.m. a 7:00 p.m. </p>
     ],
     faqText: "Ver preguntas frecuentes"
   },
@@ -39,7 +39,7 @@ const tcIntroData = {
     heading: "What is the Training Camp?",
     description: [
       <p key="paragraph 1"> The Training Camp is an intensive training course of 2 weeks for programming contests with theoretical classes during the morning and practice sessions during the afternoon. </p>,
-      <p key="paragraph 2"> The Training Camp has been organized every year since 2010 during the winter break in different universities in Argentina. The 2023 edition will be the thirfourth edition being hosted in <a class="text-blue-400" target="blank" href="https://goo.gl/maps/qVs12u8s9BZiS1ge9">La Matanza</a></p>,
+      <p key="paragraph 2"> The Training Camp has been organized every year since 2010 during the winter break in different universities in Argentina. The 2023 edition will be the thirfourth edition being hosted in <a className="text-blue-400" target="blank" href="https://goo.gl/maps/qVs12u8s9BZiS1ge9">La Matanza</a></p>,
       <p key="paragraph 3"> The Training Camp lasts two weeks from July 31 to August 11, Monday through Friday, from 9 a.m. to 7 p.m. </p>
     ],
     faqText: "See more frequently asked questions"
@@ -47,15 +47,9 @@ const tcIntroData = {
 }
 
 const TcDescription = (props) => {
-  const presentation_header = props.language === "ENG" ? 'Training Camp Argentina 2023! Ask us anything at 16th of April 6:00 PM UTC-3 on' : '¡Training Camp Argentina 2023! Respondemos dudas el 16 de Abril las 18:00 hs en'
   const {heading, description, faqText} = tcIntroData[props.language]
   return (
     <Container>
-      <SingleColumn>
-          <HeadingInfoContainer>
-            <HeadingTitle>{ presentation_header } <HeaderLink href="https://www.youtube.com/watch?v=YnBFkCoeLjo"> Youtube </HeaderLink> ! </HeadingTitle>
-          </HeadingInfoContainer>
-        </SingleColumn>
       <SingleColumn>
         <HeadingInfoContainer>
           <HeadingTitle>{heading}</HeadingTitle>
