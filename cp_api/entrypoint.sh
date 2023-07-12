@@ -9,9 +9,10 @@ then
     done
 
     echo "PostgreSQL started"
+    sleep 1
 fi
 
-python manage.py flush --no-input
+# python manage.py flush --no-input
 python manage.py migrate
 
 exec "$@"
