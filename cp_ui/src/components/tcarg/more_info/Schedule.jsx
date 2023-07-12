@@ -91,10 +91,11 @@ const ScheduleInfo = (props) => {
         )
     })
 
+    const title =  props.language === 'ESP' ? "Cronograma" : "Scheduler"
     return (tables &&
         <Container>
             <ContentWithPaddingLg>
-                <Heading> Cronograma </Heading>
+                <Heading> {title} </Heading>
                 <RowContainer>
                       {tables}
                 </RowContainer>
