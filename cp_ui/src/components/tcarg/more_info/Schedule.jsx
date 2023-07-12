@@ -90,7 +90,8 @@ const ScheduleInfo = (props) => {
             </ScheduleCard>
         )
     })
-    return (
+
+    return (tables &&
         <Container>
             <ContentWithPaddingLg>
                 <Heading> Cronograma </Heading>
