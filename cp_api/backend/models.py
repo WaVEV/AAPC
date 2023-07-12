@@ -228,13 +228,13 @@ class Schedule(TimeStampMixin):
 class Activity(TimeStampMixin):
 
     time_start = models.TimeField(null=False)
-    time_ends = models.TimeField(null=False)
+    time_end = models.TimeField(null=False)
 
     schedule = models.ForeignKey(Schedule, editable=True, related_name='activities',
                                  on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return f'Activity {self.time_start} - {self.time_ends} of the schedule {str(self.schedule)}'
+        return f'Activity {self.time_start} - {self.time_end} of the schedule {str(self.schedule)}'
 
 
 class ActivityMetadata(TimeStampMixin):

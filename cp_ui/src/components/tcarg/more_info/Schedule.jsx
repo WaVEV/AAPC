@@ -81,7 +81,7 @@ const ScheduleInfo = (props) => {
                     <tbody>
                         {activities.map(({time_start, time_end, detail}, index) => (
                             <tr key={index}>
-                              <td> {time_start} - {time_end} </td>
+                              <td> {time_start.slice(0, -3)} - {time_end.slice(0, -3)} </td>
                               <td> {detail[0].description} </td>
                           </tr>
                         ))}
