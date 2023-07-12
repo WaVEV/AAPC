@@ -92,7 +92,7 @@ const ScheduleInfo = (props) => {
     })
 
     const title =  props.language === 'ESP' ? "Cronograma" : "Scheduler"
-    return (tables &&
+    return (tables.length > 0 &&
         <Container>
             <ContentWithPaddingLg>
                 <Heading> {title} </Heading>
