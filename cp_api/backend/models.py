@@ -224,6 +224,9 @@ class Schedule(TimeStampMixin):
     def __str__(self):
         return f'{self.edition.year} - {str(self.data)}'
 
+    class Meta:
+        ordering = ['created_at']
+
 
 class Activity(TimeStampMixin):
 
@@ -235,6 +238,9 @@ class Activity(TimeStampMixin):
 
     def __str__(self):
         return f'Activity {self.time_start} - {self.time_end} of the schedule {str(self.schedule)}'
+
+    class Meta:
+        ordering = ['time_start']
 
 
 class ActivityMetadata(TimeStampMixin):
