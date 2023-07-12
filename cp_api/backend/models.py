@@ -53,7 +53,6 @@ class SponsorTier(TimeStampMixin):
     priority = models.IntegerField(null=False)
     name = models.CharField(max_length=128)
 
-
     def __str__(self):
         return f'{self.name} ({self.priority})'
 
@@ -192,3 +191,58 @@ class Contest(TimeStampMixin):
 
     def __str__(self):
         return f'Contest {str(self.date)} ({str(self.level)})'
+
+
+class ScheduleData(models.Model):
+    """Abstract ScheduleData related to a staff"""
+
+    def __str__(self):
+        return "Schedule Data: " + ", ".join(str(e) for e in self.datas.all())
+
+
+class ScheduleDataLanguage(models.Model):
+    """Summary text of an schedule"""
+
+    description = models.TextField(blank=True, null=True)
+    title = models.CharField(max_length=128)
+    summary = models.ForeignKey(ScheduleData, editable=True, related_name='datas',
+                                on_delete=models.CASCADE, null=False)  ## TODO CAMBIAR ESTE NOMBRE
+    language = models.ForeignKey(Language, editable=True,
+                                 on_delete=models.CASCADE, null=False)
+
+    def __str__(self):
+        return self.title
+
+
+class Schedule(TimeStampMixin):
+    data = models.ForeignKey(ScheduleData, editable=True, related_name='schedule',
+                             on_delete=models.SET_NULL, null=True, blank=True)
+
+    edition = models.ForeignKey(Edition, editable=True, related_name='schedules',
+                                on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.edition.year} - {str(self.data)}'
+
+
+class Activity(TimeStampMixin):
+
+    time_start = models.TimeField(null=False)
+    time_ends = models.TimeField(null=False)
+
+    schedule = models.ForeignKey(Schedule, editable=True, related_name='activities',
+                                 on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return f'Activity {self.time_start} - {self.time_ends} of the schedule {str(self.schedule)}'
+
+
+class ActivityMetadata(TimeStampMixin):
+    description = models.CharField(max_length=256, null=False)
+    language = models.ForeignKey(Language, editable=True,
+                                 on_delete=models.CASCADE, null=False)
+    activity = models.ForeignKey(Activity, editable=True, related_name='metadata',
+                                 on_delete=models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return f'Activity {self.activity.id} {str(self.language.name)}'
