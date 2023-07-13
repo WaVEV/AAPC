@@ -6,6 +6,10 @@ The AAPC web page
 
 Si necesitan hacer migraciones me avisan, creo que los modelos son lo suficientemente expresivos para que no se necesite esto (salvo por dos que tengo en mente agregar). 
 Las migraciones son faciles de hacer, pero quiero ver si no es algo que ya se ha realizado.
+Para crearlas se puede utilizar el siguiente comando (con docker compose)
+```sh
+docker compose run web python ./manage.py makemigrations
+```
 
 ## levantar el backend
 
@@ -14,7 +18,12 @@ Levantar el servidor backend: Para esto hay dos opciones
 
 ## utilizando docker compose
 
- `docker compose up`
+`docker compose up`
+
+Si queres poner ipdb debugger se logra corriendo el compose de la siguiete manera
+```sh
+docker compose run --service-ports web
+```
  
  ## Utilizando virtualenv 
 
