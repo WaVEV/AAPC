@@ -8,6 +8,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import Header from "components/headers/light.js";
 import { SectionHeading as Heading } from "components/misc/Headings.js";
 
+
 // const HeadingRow = tw.div`flex`;
 const Text = styled.div`
   ${tw`text-lg  text-gray-800`}
@@ -36,7 +37,7 @@ const Text = styled.div`
     ${tw``}
   }
   a {
-    ${tw`border-b-2 text-blue-800 border-transparent hocus:text-blue-500 hocus:border-blue-500 pb-1 transition duration-300`}
+    ${tw`border-b-2 text-blue-500 border-transparent hocus:text-blue-500 hocus:border-blue-500 pb-1 transition duration-300`}
   }
 `;
 
@@ -56,12 +57,18 @@ const GeneralInfo = (props) => {
             <p>
             Para quienes vienen del exterior recomendamos alojarse en la ciudad de Buenos Aires y no en La Matanza.
             </p>
+            <p>
+            <a href="/static/mapita_unlam.png" target="blank"> Mapa util de las instalaciones </a>
+            </p>
           </Text>
           </div>)
   }else if(props.language === 'ENG'){
     text = (<Text>
             <p>The event is runing from July 31 to August 11 (not including Saturday and Sunday) and it's divided into two levels:
             initial and advanced.
+            </p>
+            <p>
+            <a href="/static/mapita_unlam.png" target="blank"> Facility map </a>
             </p>
           </Text>)
   }
