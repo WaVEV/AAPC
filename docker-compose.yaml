@@ -7,14 +7,14 @@ services:
     command: gunicorn cp_api.wsgi --bind 0.0.0.0:8000
     volumes:
       - ./cp_api/:/usr/src/app/
-    expose:
-      - 8000
+      - ./cp_api/static:/static
     env_file:
       - ./.env
     depends_on:
       - db
+    user: "${UID}:"
   db:
-    image: postgres:13.0-alpine
+    image: postgres:15.4-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
@@ -28,8 +28,7 @@ services:
       context: .
       dockerfile: ./cp_ui/Dockerfile
     command: /start.sh
-    expose:
-      - 3000
+    user: "${UID}"
 
   nginx:
     restart: unless-stopped
@@ -40,6 +39,9 @@ services:
       - frontend
     ports:
       - "80:80"
+    user: "${UID}"
+    volumes:
+      - ./cp_api/static:/static
 
 volumes:
   postgres_data:
