@@ -81,7 +81,6 @@ class News extends React.Component{
       }
   }
 
-
   render() {
     if (this.state.news.length === 0){
       return (<Container> </Container>);

@@ -9,6 +9,7 @@ import Speakers from 'components/tcarg/more_info/Speakers.js';
 import GeneralInfo from 'components/tcarg/more_info/GeneralInfo.js';
 import ContentTable from 'components/tcarg/more_info/ContentTable.js';
 import ContestTable from 'components/tcarg/more_info/ContestTable.js';
+import ScheduleInfo from 'components/tcarg/more_info/Schedule.jsx';
 
 const PrimaryAction = tw.a`px-8 py-3 cursor-pointer text-sm sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-black font-bold rounded shadow transition duration-300 hocus:bg-gray-800 hocus:text-gray-100 focus:shadow-outline`;
 
@@ -18,9 +19,10 @@ const MoreInfo = (props) => {
   return (
     <>
     <Hero header={heading} backgroundImage="/static/hero_1.jpg" >
-      <PrimaryAction href="https://forms.gle/wtQAPMCKMnYjZSyi7" target="_black"> {inscriptionFormText} </PrimaryAction>
+      <PrimaryAction href="https://forms.gle/CAp76txX7HsHtupN8" target="_black"> {inscriptionFormText} </PrimaryAction>
     </Hero>
     <GeneralInfo />
+    <ScheduleInfo />
     <Speakers />
     <ContentTable />
     <ContestTable />

@@ -32,7 +32,7 @@ const TcArgMain = (props) => {
         <Hero header="Training Camp" backgroundImage="/static/hero_1.jpg">
             <ButtonsContainer>
                 <ButtonContainer>
-                    <InscriptionForm href="https://forms.gle/wtQAPMCKMnYjZSyi7" target="_black"> {inscriptionFormText} </InscriptionForm>
+                    <InscriptionForm href="https://forms.gle/CAp76txX7HsHtupN8" target="_black"> {inscriptionFormText} </InscriptionForm>
                 </ButtonContainer>
                 <ButtonContainer>
                     <PrimaryAction to={`${props.match.path}/more_info`}> {moreInfo} </PrimaryAction>

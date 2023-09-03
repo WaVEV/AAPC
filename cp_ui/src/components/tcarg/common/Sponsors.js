@@ -6,13 +6,14 @@ import { ContentWithPaddingXl, Container } from "components/misc/Layouts.js";
 import { SectionHeading as Heading } from "components/misc/Headings.js";
 
 const SponsorsSeparator = tw.div`mt-8`;
-const Subheading = tw.h5`font-bold text-3xl text-yellow-900 text-center mb-4`;
+const Subheading = tw.h5`font-bold text-5xl text-yellow-900 text-center mb-4`;
 const SponsorRow = tw.div`flex flex-col lg:flex-row items-center lg:items-stretch justify-center`;
-const SponsorCard = tw.div`mt-16 lg:w-1/3 m-auto`;
+const SponsorCard = tw.div`mt-4 lg:w-1/3 m-auto`;
 const SponsorBox = tw.div`px-4 text-center max-w-xs mx-auto flex flex-col items-center`;
 const ImageContainer = tw.div`px-4 max-w-xs mx-auto flex flex-col items-center`;
 const Image = tw.img``;
 const Quote = tw.blockquote`mt-5 text-gray-600 font-medium leading-loose`;
+const Link = tw.a`inline-block mt-4 text-2xl text-gray-900 p-4 font-bold cursor-pointer transition duration-300 hover:text-blue-500`;
 
 
 class Sponsors extends React.Component{
@@ -39,13 +40,17 @@ class Sponsors extends React.Component{
     return (
       <SponsorRow key={batchKey}> 
       {
-        batch.map(({logo, name}, index) => {
+        batch.map(({logo, name, link}, index) => {
           let key = `${name}-${index}`;
           return (
             <SponsorCard key={key}>
               <SponsorBox>
-                <ImageContainer> <Image src={logo} /> </ImageContainer>
-                <Quote>{name}</Quote>
+                <Link href={link} target='_blank'>
+                  <ImageContainer>
+                  <Image src={logo} />
+                  </ImageContainer>
+                </Link>
+                <Link href={link} target='_blank'>{name}</Link> 
               </SponsorBox>
             </SponsorCard>);
         })
@@ -74,7 +79,7 @@ class Sponsors extends React.Component{
         sponsorsByTier[tier.id].push(this.renderCardBatch(aux[tier.id], batchKey));
         aux[tier.id] = []
       }
-      aux[tier.id].push({name: sponsors[i].sponsor.name, logo: sponsors[i].sponsor.logo});
+      aux[tier.id].push({name: sponsors[i].sponsor.name, logo: sponsors[i].sponsor.logo, link: sponsors[i].sponsor.link});
       tiers_priorities[tier.id] = {priority: tier.priority, name: tier.name};
     }
 

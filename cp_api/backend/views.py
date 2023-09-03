@@ -6,13 +6,16 @@ from rest_framework import viewsets
 from django.db.models.base import ModelBase
 from rest_framework import filters
 import django_filters
+from rest_framework.response import Response
+
 
 from .serializers import (
     GeneralSerializer,
     SponsorEditionTierSerializer,
     LessonSerializer,
     ContestSerializer,
-    StaffSerializer)
+    StaffSerializer,
+    ScheduleSerializer)
 from . import models
 
 
@@ -90,6 +93,7 @@ class Contests(GeneralViewSet):
         ContestSerializer.Meta.model = self.model
         return ContestSerializer
 
+
 class SponsorEditionTier(GeneralViewSet):
     model = models.SponsorEditionTier
     filterset_fields = ['edition']
@@ -98,6 +102,26 @@ class SponsorEditionTier(GeneralViewSet):
         model = self.kwargs.get('model')
         SponsorEditionTierSerializer.Meta.model = self.model
         return SponsorEditionTierSerializer
+
+
+class Schedule(GeneralViewSet):
+    model = models.Schedule
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = ['edition']
+
+    def get_serializer_class(self):
+        return ScheduleSerializer
+
+    def get_queryset(self):
+        return self.model.objects.all()
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        language = self.request.query_params.get("language")
+        serializer = self.get_serializer(
+            queryset, many=True, context={"language": language}
+        )
+        return Response(serializer.data)
 
 
 views = [
@@ -109,4 +133,5 @@ views = [
     ('staffs', Staffs),
     ('lessons', Lessons),
     ('contests', Contests),
+    ('schedules', Schedule)
 ]

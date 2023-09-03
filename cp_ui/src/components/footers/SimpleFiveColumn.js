@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import LogoImage from "../../images/AAPC.png";
+// import LogoImage from "../../images/AAPC.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
@@ -15,7 +15,7 @@ const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap
 const Column = tw.div`md:w-1/5`;
 const WideColumn = tw(Column)`text-center md:text-left w-full md:w-2/5 mb-10 md:mb-0`;
 
-const ColumnHeading = tw.h5`font-bold`;
+// const ColumnHeading = tw.h5`font-bold`;
 
 const LinkList = tw.ul`mt-4 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
@@ -41,11 +41,10 @@ export default () => {
       <FiveColumns>
         <WideColumn>
           <LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>AAPC</LogoText>
+
           </LogoContainer>
           <CompanyDescription>
-            AAPC es una asociación sin fines de lucro. Para consultas, enviar mail a: contacto.trainingcamp.arg@gmail.com 
+            Asociación Argentina de Programación Competitiva es una asociación sin fines de lucro. Para consultas, enviar mail a: contacto.trainingcamp.arg@gmail.com 
 
           </CompanyDescription>
           <SocialLinksContainer>

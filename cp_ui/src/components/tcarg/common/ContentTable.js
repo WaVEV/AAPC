@@ -93,8 +93,6 @@ class ContentTable extends React.Component{
     }
     levels = Object.entries(levels).sort((a, b) => a[1].level - b[1].level);
 
-    console.log('this.state.language')
-    console.log(this.props.language)
     const headers = this.props.language === 'ESP' ? ['Día', 'Orador/a', 'Materia', 'Adjunto', 'Video'] : ['Day', 'Speaker', 'Subject', 'Attachment', 'Video'];
     if (this.state.lessons.length === 0){
       return '';

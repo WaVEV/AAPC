@@ -50,10 +50,14 @@ const NavBar = () => {
     }
   ]
 
-  const AppLogo = (
+  /* const AppLogo = (
     <LogoLink to="/">
       <img src={logo} alt="logo" />
       AAPC
+    </LogoLink>
+  );*/
+  const AppLogo = (
+    <LogoLink to="/">
     </LogoLink>
   );
 
