@@ -1,3 +1,2 @@
 #!/bin/sh
-serve -s build
-
+# npm run build
