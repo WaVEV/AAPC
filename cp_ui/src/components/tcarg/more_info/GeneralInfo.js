@@ -44,18 +44,19 @@ const Text = styled.div`
 
 
 const GeneralInfo = (props) => {
-  let text;
+  let text1;
 
   if (props.language === 'ESP'){
-    text = (
+    text1 = (
       <div>
         <Text>
+            <p>¡Bienvenido/a al mejor entrenamiento de programación competitiva del país!</p>
             <p>
-            El evento transcurrirá desde el 31 de Julio al 11 de Agosto (sin incluir sábado y domingo) y estará dividido en dos niveles:
-            inicial y avanzado.
+            ¿Qué es la programación competitiva?
             </p>
             <p>
-            Para quienes vienen del exterior recomendamos alojarse en la ciudad de Buenos Aires y no en La Matanza.
+            Consiste en resolver problemas de lógica y matemática mediante la computadora (problemas similares a los que se presentan en distintas Olimpíadas de Matemáticas)
+Requiere un nivel básico de C/C++, Python o Java
             </p>
             <p>
             <a href="/static/mapita_unlam.png" target="blank"> Mapa util de las instalaciones </a>
@@ -63,7 +64,7 @@ const GeneralInfo = (props) => {
           </Text>
           </div>)
   }else if(props.language === 'ENG'){
-    text = (<Text>
+    text1 = (<Text>
             <p>The event is runing from July 31 to August 11 (not including Saturday and Sunday) and it's divided into two levels:
             initial and advanced.
             </p>
@@ -73,11 +74,39 @@ const GeneralInfo = (props) => {
           </Text>)
   }
 
+  let text2 = (
+    <Text>
+      <p>
+        <i>Nivel:</i> <b>Inicial y Avanzado</b>
+      </p>
+      <p>
+        <i>Fecha:</i> <b>Lunes 08 al viernes 19 de Julio de 2024</b>
+      </p>
+      <p>
+        <i>Lugar:</i> <b>Universidad Nacional de Rosario</b> -  Facultad de Ciencias Exactas, Ingeniería y Agrimensura
+      </p>
+      <p>
+      <i>Dirección:</i> <a href="https://goo.su/MHJJa">Bv. Pellegrini 250, Rosario, provincia de Santa Fe. (ingreso por Bv. Pellegrini)</a>
+      </p>
+      <p>
+      Inscripción: Gratuita, completando el Formulario de Inscripción TC 2024. Tiempo límite hasta el día 02 de junio (inclusive) - Siguiendo el órden de inscripción se dará prioridad a aquellas personas que acceden al uso de los laboratorios de la universidad.
+      </p>
+      <p>
+      <i>Aclaración: Los costos de traslado y alojamiento corren por cuenta del participante.</i>
+      </p>
+      <p>
+        <i>Dudas: <a href="mailto:contacto.trainingcamp.arg@gmail.com"></a>contacto.trainingcamp.arg@gmail.com</i>
+      </p>
+    </Text>
+  )
+
   return (
       <Container>
         <ContentWithPaddingLg>
           <Heading>Training Camp Argentina</Heading>
             {text}  
+          <Heading>Training Camp Argentina</Heading>
+            {text2}
         </ContentWithPaddingLg>
       </Container>
   );

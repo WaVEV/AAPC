@@ -34,50 +34,14 @@ const faqsData = {
     heading: "Preguntas Frecuentes",
     faqs: [
       {
-        question: "¿Cómo llegar y dónde alojarme?",
+        question: "¿Dónde alojarme?",
         answer:
-          "Para quienes vienen del exterior recomendamos alojarse en la ciudad de Buenos Aires y no en La Matanza. Más adelante agregaremos más información con recomendaciones de viaje y acceso a la universidad."
+          "La FCEIA-UNR está ubicada en una zona céntrica de la ciudad de Rosario que cuenta con distintos tipos de alojamientos. Su dirección es Av. Pellegrini 250. Por ello, recomendamos alojarse en la zona conformada entre Bv. Pellegrini y Arturo Illia, y Bv. Francia y Av. Belgrano. Próximamente estaremos enviando más información con respecto a hostels y hoteles sugeridos."
       },
       {
-        question: "¿Qué es una competencia de programación?",
+        question: "¿Y qué más?",
         answer:
-          "Se trata de competencias en las que hay que resolver problemas individualmente o en equipo, utilizando razonamientos de lógica y matemática, como así también algorítmicos. Luego, la solución debe ser implementada mediante un lenguaje de programación, y se evalúa dicha solución contra un conjunto de casos de prueba que juzgan automáticamente (y muchas veces en vivo) si esta es correcta o no."
-      },
-      {
-        question: "¿Qué tipo de problemas se pueden encontrar en una competencia de programación?",
-        answer:
-          "Las competencias cuentan con problemas de diversos estilos: estructuras de datos, teoría de juegos, algoritmos greedy, programación dinámica, fuerza bruta, aritmética, geometría computacional, etc. Se pueden ver en la página del Torneo Argentino de Programación los problemas de años anteriores."
-      },
-      {
-        question: "¿Para qué sirve participar del Training Camp?",
-        answer:
-          "Un Training Camp prepara a los estudiantes para participar de competencias de programación. La más importante de ellas, la ICPC, es para la cual apuntamos a preparar a los participantes. Además, al aprender a resolver problemas algorítmicos, lógicos y matemáticos los participantes quedan también muy bien preparados para enfrentar entrevistas en las principales empresas de la industria, muchas de las cuales son o han sido sponsors del Training Camp."
-      },
-      {
-        question: "¿El entrenamiento recibido en el Training Camp sirve para cualquier competencia de programación?",
-        answer:
-          "Si, aunque el entrenamiento se enfoca en la preparación para la competencia Regional de la ICPC y en el caso de los participantes argentinos también para el Torneo Argentino de Programación. En ambas competencias, varios equipos de 3 integrantes, compiten en distintas sedes del país (o del continente) en simultaneo, tratando de resolver un conjunto de entre 8 y 13 problemas, utilizando una única computadora por equipo y en un plazo de 5 horas. Cada vez que resuelven un problema, suben el código fuente a un sitio web, que les informa si su programa resuelve de forma correcta el problema."
-      },
-      {
-        question: "¿Qué lenguajes utilizaremos en el Training Camp?",
-        answer:
-          "Utilizaremos C, C++, Java o Python, ya que estos son los lenguajes permitidos en las competencias ACM-ICPC."
-      },
-      {
-        question: "¿Y qué mas?",
-        answer:
-          "Además de las charlas técnicas, y sesiones de práctica, el Training Camp contará con momentos de distensión y recreación, y algún bloque para que los sponsors hagan una presentación."
-      },
-      {
-        question: "Recién comienzo la carrera y no tengo muchos conocimientos… ¿Puedo asistir? ¿Me sirve el entrenamiento?",
-        answer:
-          "¡Por supuesto que sí! No va a ser fácil, pero esto es un desafío. Mientras antes comiencen a practicar, mejor. El nivel de los participantes en los Training Camp suele ser muy variado, y los instructores están capacitados para que todos aprendan."
-      },
-      {
-        question: "¿Me gano algo por participar de un Training Camp o de un torneo de programación?",
-        answer:
-          "Sí, van a aprender muchas cosas nuevas, en muchos casos diferentes de las que suelen estudiar en sus respectivas carreras. Además, aquellos con buen desempeño durante los torneos de programación tendrán la posibilidad de viajar a las respectivas finales regionales o mundiales. Además, el entrenamiento puede ser útil para la mayoría de las competencias de programación más reconocidas: Google Code Jam, Facebook Hacker Cup, CodeForces, TopCoder, Codility, Codechef, SPOJ, URI OJ, HackerRank.\
-          Dependiendo de la edición (ya que la sede, los auspiciantes, y demás cuestiones organizativas varían cada año) podría haber diversos premios para los mejores equipos al finalizar el Training Camp."
+          "Por fuera de las charlas técnicas y sesiones de práctica, habrá bloques para que los sponsors puedan hacer presentaciones y compartir experiencias. Además ¡habrán momentos de distensión y recreación durante el Training Camp!. El día 09 de julio es Feriado Nacional en conmemoración del Día de la Independencia Argentina. Durante ese día se realizarán actividades recreativas y turísticas planificadas para el contingente de estudiantes que desee conocer un poco más de la historia y la cultura de la ciudad de Rosario."
       },
     ]
   },
