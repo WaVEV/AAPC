@@ -11,7 +11,7 @@ import { SectionHeading as Heading } from "components/misc/Headings.js";
 
 // const HeadingRow = tw.div`flex`;
 const Text = styled.div`
-  ${tw`text-lg  text-gray-800`}
+  ${tw`text-lg  text-gray-800 text-justify`}
   p {
     ${tw`mt-2 leading-loose`}
   }
@@ -44,35 +44,6 @@ const Text = styled.div`
 
 
 const GeneralInfo = (props) => {
-  let text1;
-
-  if (props.language === 'ESP'){
-    text1 = (
-      <div>
-        <Text>
-            <p>¡Bienvenido/a al mejor entrenamiento de programación competitiva del país!</p>
-            <p>
-            ¿Qué es la programación competitiva?
-            </p>
-            <p>
-            Consiste en resolver problemas de lógica y matemática mediante la computadora (problemas similares a los que se presentan en distintas Olimpíadas de Matemáticas)
-Requiere un nivel básico de C/C++, Python o Java
-            </p>
-            <p>
-            <a href="/static/mapita_unlam.png" target="blank"> Mapa util de las instalaciones </a>
-            </p>
-          </Text>
-          </div>)
-  }else if(props.language === 'ENG'){
-    text1 = (<Text>
-            <p>The event is runing from July 31 to August 11 (not including Saturday and Sunday) and it's divided into two levels:
-            initial and advanced.
-            </p>
-            <p>
-            <a href="/static/mapita_unlam.png" target="blank"> Facility map </a>
-            </p>
-          </Text>)
-  }
 
   let text2 = (
     <Text>
@@ -103,8 +74,6 @@ Requiere un nivel básico de C/C++, Python o Java
   return (
       <Container>
         <ContentWithPaddingLg>
-          <Heading>Training Camp Argentina</Heading>
-            {text}  
           <Heading>Training Camp Argentina</Heading>
             {text2}
         </ContentWithPaddingLg>
