@@ -11,7 +11,7 @@ import { SectionHeading as Heading } from "components/misc/Headings.js";
 
 // const HeadingRow = tw.div`flex`;
 const Text = styled.div`
-  ${tw`text-lg  text-gray-800`}
+  ${tw`text-lg  text-gray-800 text-justify`}
   p {
     ${tw`mt-2 leading-loose`}
   }
@@ -44,40 +44,38 @@ const Text = styled.div`
 
 
 const GeneralInfo = (props) => {
-  let text;
 
-  if (props.language === 'ESP'){
-    text = (
-      <div>
-        <Text>
-            <p>
-            El evento transcurrirá desde el 31 de Julio al 11 de Agosto (sin incluir sábado y domingo) y estará dividido en dos niveles:
-            inicial y avanzado.
-            </p>
-            <p>
-            Para quienes vienen del exterior recomendamos alojarse en la ciudad de Buenos Aires y no en La Matanza.
-            </p>
-            <p>
-            <a href="/static/mapita_unlam.png" target="blank"> Mapa util de las instalaciones </a>
-            </p>
-          </Text>
-          </div>)
-  }else if(props.language === 'ENG'){
-    text = (<Text>
-            <p>The event is runing from July 31 to August 11 (not including Saturday and Sunday) and it's divided into two levels:
-            initial and advanced.
-            </p>
-            <p>
-            <a href="/static/mapita_unlam.png" target="blank"> Facility map </a>
-            </p>
-          </Text>)
-  }
+  let text2 = (
+    <Text>
+      <p>
+        <i>Nivel:</i> <b>Inicial y Avanzado</b>
+      </p>
+      <p>
+        <i>Fecha:</i> <b>Lunes 08 al viernes 19 de Julio de 2024</b>
+      </p>
+      <p>
+        <i>Lugar:</i> <b>Universidad Nacional de Rosario</b> -  Facultad de Ciencias Exactas, Ingeniería y Agrimensura
+      </p>
+      <p>
+      <i>Dirección:</i> <a href="https://goo.su/MHJJa">Bv. Pellegrini 250, Rosario, provincia de Santa Fe. (ingreso por Bv. Pellegrini)</a>
+      </p>
+      <p>
+      Inscripción: Gratuita, completando el Formulario de Inscripción TC 2024. Tiempo límite hasta el día 02 de junio (inclusive) - Siguiendo el órden de inscripción se dará prioridad a aquellas personas que acceden al uso de los laboratorios de la universidad.
+      </p>
+      <p>
+      <i>Aclaración: Los costos de traslado y alojamiento corren por cuenta del participante.</i>
+      </p>
+      <p>
+        <i>Dudas: <a href="mailto:contacto.trainingcamp.arg@gmail.com"></a>contacto.trainingcamp.arg@gmail.com</i>
+      </p>
+    </Text>
+  )
 
   return (
       <Container>
         <ContentWithPaddingLg>
           <Heading>Training Camp Argentina</Heading>
-            {text}  
+            {text2}
         </ContentWithPaddingLg>
       </Container>
   );

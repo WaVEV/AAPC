@@ -10,7 +10,7 @@ const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const HeadingInfoContainer = tw.div`flex flex-col items-center`;
 
-const Content = tw.div`mt-16`;
+const Content = tw.div`mt-16 `;
 
 const Card = styled.div(props => [
   tw`mt-24 md:flex justify-center items-center`,
@@ -27,7 +27,7 @@ const HeaderLink = tw.a`inline-block text-4xl sm:text-5xl text-blue-700 font-bol
 
 const tcIntroData = {
   ESP: {
-    heading: "¿Qué es el Training Camp?",
+    heading: "¡Bienvenido/a al mejor entrenamiento de programación competitiva del país!",
     description: [
       <p key="paragraph 1"> El Training Camp es un programa de entrenamiento intensivo de dos semanas diseñado para competencias de programación. Durante la mañana, se imparten clases teóricas y por las tardes se realizan sesiones de práctica. </p>,
       <p key="paragraph 2"> Este evento se lleva a cabo anualmente desde 2010, aprovechando el receso invernal, en diferentes universidades de Argentina. La edición de 2023 será la decimocuarta y se llevará a cabo en <a className="text-blue-400" target="blank" href="https://goo.gl/maps/qVs12u8s9BZiS1ge9">La Matanza</a> </p>,
@@ -60,9 +60,13 @@ const TcDescription = (props) => {
               <Image imageSrc="/static/img_1.jpg" />
               <Details>
                 <Description>
-                {
-                  description.map((elem, index) => elem)
-                }
+                  <p><b>
+                  ¿Qué es la programación competitiva?
+                  </b></p>
+                  <p><ul>
+                  <li>Consiste en resolver <b>problemas de lógica y matemática</b> mediante la computadora (problemas similares a los que se presentan en distintas Olimpíadas de Matemáticas)</li>
+                  <li>Requiere un nivel básico de <b>C/C++, Python o Java</b></li>
+                  </ul></p>
                 </Description>
                 <Link href={`${props.match.path}/faq`}>{faqText}</Link>
               </Details>
