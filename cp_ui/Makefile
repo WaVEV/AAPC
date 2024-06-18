@@ -1,8 +1,18 @@
 SHELL := /bin/bash
 PROJECT_NAME := cp_api
 
+
+docker-build:
+	docker build -f Dockerfile -t cp_ui .
+
+
+run: docker-build
+	docker run -u 1000 -v ${PWD}:/app -p 3000:3000 -it cp_ui npm start
+
+
 build:
-	npm run build
+	docker run -u 1000 -v ${PWD}:/app -it cp_ui npm run build
+
 	sed -i 's@manifest.json@static/manifest.json@g' ./build/index.html
 	sed -i 's@favicon.ico@static/favicon.ico@g' ./build/index.html
 	sed -i 's@logo192.png@static/logo192.png@g' ./build/index.html
