@@ -16,17 +16,34 @@ import PreviousEditions from "components/tcarg/previous_editions/PreviousEdition
 import MoreInfo from "components/tcarg/more_info/MoreInfo.js"
 import Faq from "components/tcarg/faq.js"
 
-const PrimaryAction = styled(Link)`${tw`px-8 py-3 cursor-pointer text-sm sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-black font-bold rounded shadow transition duration-300 hocus:bg-gray-800 hocus:text-gray-100 focus:shadow-outline`}`;
-const InscriptionForm = tw.a`px-8 py-3 cursor-pointer text-sm sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-black font-bold rounded shadow transition duration-300 hocus:bg-gray-800 hocus:text-gray-100 focus:shadow-outline`;
+
+// Define buttonStyles as a string (using tw`` directly)
+const buttonStyles = tw`
+  px-8 py-3 cursor-pointer text-sm sm:mt-16 sm:px-8 sm:py-4 w-full
+  bg-gray-100 font-black font-bold rounded shadow
+  transition duration-300
+  hocus:bg-gray-800 hocus:text-gray-100 focus:shadow-outline
+`;
+
+// Styled component for Link (PrimaryAction)
+const PrimaryAction = styled(Link)`
+  ${buttonStyles}
+`;
+
+// Styled component for anchor tag (InscriptionForm)
+const InscriptionForm = styled.a`
+  ${buttonStyles}
+`;
+
 const ButtonsContainer = tw.div`sm:inline-flex sm:space-x-12 mb-4 text-sm font-medium`;
-const ButtonContainer = tw.div`first:mt-5 w-full sm:w-auto justify-center items-center first:sm:ml-0 first:sm:mt-0 inline-flex sm:space-x-12 mb-4 text-sm font-medium`;
+const ButtonContainer = tw.div`first:mt-5 w-64 justify-center items-center first:sm:ml-0 first:sm:mt-0 inline-flex sm:space-x-12 mb-4 text-sm font-medium`;
 
 const TcArgMain = (props) => {
     console.log(props.language);
     const inscriptionFormText = props.language === 'ESP' ? 'Formulario de Inscripción' : 'Registration Form';
     const moreInfo = props.language === 'ESP' ? 'Más Información' : 'More Info';
     const previousEditions = props.language === 'ESP' ? 'Ediciones Anteriores' : 'Previous Editions';
-    const faqText= props.language === 'ESP' ? 'Ver preguntas frecuentes' : 'See more frequently asked questions';
+    const faqText= props.language === 'ESP' ? 'Preguntas frecuentes' : 'Frequently asked questions';
     return (
     <>
         <Hero header="Training Camp" backgroundImage="/static/hero_1.jpg">

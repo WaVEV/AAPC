@@ -36,12 +36,17 @@ const faqsData = {
       {
         question: "¿Dónde alojarme?",
         answer:
-          "La FCEIA-UNR está ubicada en una zona céntrica de la ciudad de Rosario que cuenta con distintos tipos de alojamientos. Su dirección es Av. Pellegrini 250. Por ello, recomendamos alojarse en la zona conformada entre Bv. Pellegrini y Arturo Illia, y Bv. Francia y Av. Belgrano. Próximamente estaremos enviando más información con respecto a hostels y hoteles sugeridos."
+          `La FCEIA-UNR está ubicada en una zona céntrica de la ciudad de Rosario que cuenta con distintos tipos de alojamientos. Su dirección es Av. Pellegrini 250. Por ello, recomendamos alojarse en la zona conformada entre Bv. Pellegrini y Arturo Illia, y Bv. Francia y Av. Belgrano.
+          Aquí se pueden consultar hostels - https://groups.google.com/g/training-camp-argentina-2024/c/FIqhVo-nnYY`
       },
       {
         question: "¿Y qué más?",
         answer:
           "Por fuera de las charlas técnicas y sesiones de práctica, habrá bloques para que los sponsors puedan hacer presentaciones y compartir experiencias. Además ¡habrán momentos de distensión y recreación durante el Training Camp!. El día 09 de julio es Feriado Nacional en conmemoración del Día de la Independencia Argentina. Durante ese día se realizarán actividades recreativas y turísticas planificadas para el contingente de estudiantes que desee conocer un poco más de la historia y la cultura de la ciudad de Rosario."
+      },
+      {
+        question: "¿Puedo participar virtualmente?",
+        answer: "El Training Camp es un evento pensado para ser presencial. Pero haremos nuestro mejor esfuerzo para los que no hayan podido llegar a asistir puedan acceder a los contenidos. El formulario es SÓLAMENTE para los asistentes presenciales. Si querés acceder al material de forma virtual te recomendamos subscribirte a la lista de correo y telegram donde iremos enviando las actualizaciones, links de interés, etc."
       },
     ]
   },
@@ -133,8 +138,8 @@ const Faq = (props) => {
                   initial="collapsed"
                   animate={activeQuestionIndex === index ? "open" : "collapsed"}
                   transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
-                >
-                  {faq.answer}
+                  >
+                  { faq.answer }
                 </Answer>
               </FAQ>
             ))}
