@@ -49,7 +49,7 @@ const tcIntroData = {
       <p key="paragraph 1"> La programación competitiva es una disciplina en la que se resuelven problemas complejos de lógica y matemáticas utilizando una computadora. Estos desafíos son similares a los que se encuentran en las Olimpíadas de Matemáticas y otras competencias académicas. </p>,
       <p key="paragraph 2">
         Este evento se lleva a cabo anualmente desde 2010, aprovechando el receso invernal, en diferentes universidades de Argentina. La edición de 2024 será la decimoquinta y se llevará a cabo en 
-          <LinkText className="text-blue-400" target="blank" href="https://maps.app.goo.gl/WQ1hYHaq48JPrWKs6">Universidad Nacional de Rosario</LinkText> </p>,
+          <LinkText className="text-blue-400" target="blank" href="https://goo.su/MHJJa">Universidad Nacional de Rosario</LinkText> </p>,
     ],
     faqText: "Ver preguntas frecuentes",
     imageSrc: "/static/img_1.jpg"
@@ -59,7 +59,7 @@ const tcIntroData = {
     description: [
       <p key="paragraph 1"> The Training Camp is an intensive training course of 2 weeks for programming contests with theoretical classes during the morning and practice sessions during the afternoon. </p>,
       <p key="paragraph 2"> The Training Camp has been organized every year since 2010 during the winter break in different universities in Argentina. The 2023 edition will be the thirfourth edition being hosted in
-        <LinkText className="text-blue-400" target="blank" href="https://maps.app.goo.gl/WQ1hYHaq48JPrWKs6">Universidad Nacional de Rosario</LinkText> </p>,
+        <LinkText className="text-blue-400" target="blank" href="https://goo.su/MHJJa">Universidad Nacional de Rosario</LinkText> </p>,
       <p key="paragraph 3"> The Training Camp lasts two weeks from July 31 to August 11, Monday through Friday, from 9 a.m. to 7 p.m. </p>
     ],
     faqText: "See more frequently asked questions",
