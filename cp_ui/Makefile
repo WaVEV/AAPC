@@ -10,6 +10,10 @@ run: docker-build
 	docker run -u 1000 -v ${PWD}:/app -p 3000:3000 -it cp_ui npm start
 
 
+install: docker-build
+	docker run -v ${PWD}:/app -p 3000:3000 -u $UID cp_ui npm install
+
+
 build:
 	docker run -u 1000 -v ${PWD}:/app -it cp_ui npm run build
 
